@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.FoodHarvesting1Controller">
+   <children>
+      <ImageView fitHeight="578.0" fitWidth="769.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@WuKingdom.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="186.0" layoutY="9.0" text="Food Haversting I">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <effect>
+            <Lighting specularConstant="1.6" specularExponent="6.24" surfaceScale="0.77">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.4000000059604645" green="0.9300000071525574" blue="1.0" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <Label fx:id="instruction" layoutX="133.0" layoutY="80.0" text="Choose 3 Generals to harvest food and node without food (space-separated)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="general1" layoutX="141.0" layoutY="112.0" prefWidth="150.0" promptText="General 1">
+         <effect>
+            <ColorAdjust contrast="0.3" hue="0.3" saturation="0.52" />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="general2" layoutX="312.0" layoutY="112.0" prefWidth="150.0" promptText="General 2">
+         <effect>
+            <ColorAdjust contrast="0.3" hue="0.3" saturation="0.52" />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="general3" layoutX="478.0" layoutY="112.0" prefWidth="150.0" promptText="General 3">
+         <effect>
+            <ColorAdjust contrast="0.3" hue="0.3" saturation="0.52" />
+         </effect>
+      </ComboBox>
+      <Button fx:id="search" layoutX="480.0" layoutY="149.0" mnemonicParsing="false" onAction="#start" prefHeight="26.0" prefWidth="44.0" text="Start">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="foodProduction" layoutX="144.0" layoutY="361.0" prefHeight="192.0" prefWidth="480.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust contrast="0.3" hue="0.3" saturation="0.21" />
+         </effect>
+      </TextArea>
+      <ImageView fx:id="general1pic" fitHeight="146.0" fitWidth="164.0" layoutX="114.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="general2pic" fitHeight="146.0" fitWidth="164.0" layoutX="302.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="general3pic" fitHeight="146.0" fitWidth="164.0" layoutX="494.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="nodeField" layoutX="195.0" layoutY="149.0" prefHeight="26.0" prefWidth="234.0" promptText="Enter node without food: ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust contrast="0.3" hue="0.3" saturation="0.52" />
+         </effect>
+      </TextField>
+      <Button fx:id="back" layoutX="61.0" layoutY="32.0" mnemonicParsing="false" onAction="#close" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

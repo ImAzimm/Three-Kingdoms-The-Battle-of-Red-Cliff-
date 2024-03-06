@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="assignment.HuaRongRoadController">
+   <children>
+      <ImageView fitHeight="581.0" fitWidth="782.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@WuKingdom.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="74.0" layoutY="14.0" prefHeight="70.0" prefWidth="628.0" text="Engaging Cao Cao at Hua Rong Road" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.79" specularConstant="0.85" specularExponent="26.61">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.6583333611488342" green="0.5" blue="1.0" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <ImageView fx:id="Road" fitHeight="253.0" fitWidth="382.0" layoutX="197.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea fx:id="outputArea" layoutX="222.0" layoutY="359.0" prefHeight="200.0" prefWidth="332.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="showPath" layoutX="579.0" layoutY="446.0" mnemonicParsing="false" onAction="#showPath" text="Find Path">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

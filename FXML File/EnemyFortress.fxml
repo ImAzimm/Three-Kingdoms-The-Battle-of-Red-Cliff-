@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.EnemyFortressController">
+   <children>
+      <ImageView fitHeight="587.0" fitWidth="781.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@WuKingdom.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="164.0" layoutY="-1.0" prefHeight="64.0" prefWidth="494.0" text="Enemy Fortress Attack Simulation">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="1.61" specularExponent="0.46" surfaceScale="10.0">
+               <bumpInput>
+                  <Lighting bumpInput="$null">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.953023374080658" green="0.9789473414421082" blue="0.4604678452014923" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <Button fx:id="possiblePath" layoutX="396.0" layoutY="387.0" mnemonicParsing="false" onAction="#possiblePath" text="All possible path">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ImageView fx:id="map" fitHeight="274.0" fitWidth="414.0" layoutX="189.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="baseCamp" layoutX="241.0" layoutY="63.0" prefHeight="26.0" prefWidth="340.0" promptText="Enter the base camp for the enemy base camp:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="0.04" contrast="-0.11" hue="0.44" saturation="0.08" />
+         </effect>
+      </TextField>
+      <Button fx:id="bestPath" layoutX="285.0" layoutY="387.0" mnemonicParsing="false" onAction="#bestPath" text="Best path">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="next" layoutX="618.0" layoutY="524.0" mnemonicParsing="false" onAction="#next" text="Next">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="outputArea" layoutX="207.0" layoutY="420.0" prefHeight="142.0" prefWidth="367.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust contrast="0.34" hue="0.34" saturation="0.11" />
+         </effect>
+      </TextArea>
+   </children>
+</AnchorPane>

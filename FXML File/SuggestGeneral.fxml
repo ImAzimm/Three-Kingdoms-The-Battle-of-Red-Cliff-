@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.SuggestGeneralController">
+   <children>
+      <ImageView fitHeight="590.0" fitWidth="767.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@WuKingdom.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="241.0" layoutY="32.0" prefHeight="71.0" prefWidth="322.0" text="Form team according ability" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ability" layoutX="197.0" layoutY="103.0" prefHeight="52.0" prefWidth="190.0" promptText="Select ability">
+         <effect>
+            <ColorAdjust brightness="0.08" contrast="0.05" hue="0.08" saturation="0.36" />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="level" layoutX="411.0" layoutY="103.0" prefHeight="52.0" prefWidth="190.0" promptText="Select level">
+         <effect>
+            <ColorAdjust brightness="0.08" contrast="0.05" hue="0.08" saturation="0.36" />
+         </effect>
+      </ComboBox>
+      <Button fx:id="search" layoutX="348.0" layoutY="161.0" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="107.0" text="Search" />
+      <Label fx:id="generalDisplay" alignment="TOP_CENTER" layoutX="110.0" layoutY="307.0" prefHeight="223.0" prefWidth="562.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="levelDisplay" layoutX="270.0" layoutY="207.0" prefHeight="82.0" prefWidth="225.0" textFill="WHITE" />
+      <ImageView fx:id="general1" fitHeight="163.0" fitWidth="133.0" layoutX="170.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="general2" fitHeight="163.0" fitWidth="133.0" layoutX="327.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="general3" fitHeight="163.0" fitWidth="133.0" layoutX="480.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="close" layoutX="639.0" layoutY="24.0" mnemonicParsing="false" onAction="#close" prefHeight="43.0" prefWidth="65.0" text="Close" />
+      <Button fx:id="backTree" layoutX="74.0" layoutY="24.0" mnemonicParsing="false" onAction="#backTree" prefHeight="43.0" prefWidth="122.0" text="Back to Tree View" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.FoodHarvestingController">
+   <children>
+      <ImageView fitHeight="583.0" fitWidth="769.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@WuKingdom.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="198.0" layoutY="3.0" text="Food Haversting">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <effect>
+            <Lighting specularConstant="1.6" specularExponent="6.24" surfaceScale="0.77">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.4000000059604645" green="0.9300000071525574" blue="1.0" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <ImageView fx:id="map" fitHeight="304.0" fitWidth="513.0" layoutX="153.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="nodeField" layoutX="198.0" layoutY="413.0" prefHeight="26.0" prefWidth="233.0" promptText="Enter node without food: ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust contrast="-0.02" hue="0.39" saturation="0.34" />
+         </effect>
+      </TextField>
+      <TextArea fx:id="pathArea" layoutX="179.0" layoutY="448.0" prefHeight="104.0" prefWidth="390.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust contrast="-0.02" hue="0.39" saturation="0.34" />
+         </effect>
+      </TextArea>
+      <Button fx:id="start" layoutX="487.0" layoutY="413.0" mnemonicParsing="false" onAction="#start" prefHeight="26.0" prefWidth="67.0" text="Start">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="instruction" layoutX="128.0" layoutY="384.0" text="Enter node without food  (space-separated) (0 for every node have food):  " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="next" layoutX="661.0" layoutY="526.0" mnemonicParsing="false" onAction="#next" text="Next">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="close" layoutX="62.0" layoutY="25.0" mnemonicParsing="false" onAction="#close" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

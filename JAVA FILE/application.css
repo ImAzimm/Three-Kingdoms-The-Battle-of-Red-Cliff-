@@ -1,0 +1,47 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#tableView{
+    -fx-font-size: 13px;
+}
+
+#outputArea{
+    -fx-padding: 10 4.1 10 4.1;
+}
+
+#strength,#name,#armyType,#intelligence,#politic,#hitPoint,#leadership{
+    -fx-font-weight:bold;
+    -fx-padding: 6.2 4.1 6.2 4.1;
+}
+
+#start,#close,#Ascendingsort,#Descendingsort,#sort,#binarySort,#next,#back,#backTree,#search,#arrange,#game,#encrypt,#decrypt,#dynamicArrow,#showPath{
+    -fx-background-color: rgba(255, 219, 235, 1);
+    -fx-font-weight:bold;
+}
+
+#arrow, #enemy, #food, #huaRong, #redCliff, #encrypted{
+    -fx-background-color: rgba(255, 224, 71, 1);
+    -fx-font-weight:bold;
+}
+
+#strengthDisplay,#leadershipDisplay,#intelligenceDisplay,#politicDisplay,#hitPointDisplay,#generalDisplay,#levelDisplay,#display,#displayMatrix,#instruction,#instructionLifeSpan{
+    -fx-font-weight:bold;
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-padding: 0 0 0 10;
+}
+
+#generalDisplay{
+    -fx-font-weight:bold;
+    -fx-background-color: rgba(65, 52, 122, 0.5);
+    -fx-padding: 0 0 0 10;
+}
+
+#clusterFound{
+    -fx-background-color: rgba(222, 249, 149, 0.7);
+}
+
+#bestPath, #possiblePath{
+    -fx-background-color: rgba(255, 224, 71, 1);
+    -fx-font-weight:bold;
+}

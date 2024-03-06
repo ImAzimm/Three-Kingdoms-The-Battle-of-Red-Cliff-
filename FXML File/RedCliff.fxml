@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.RedCliffController">
+   <children>
+      <ImageView fitHeight="583.0" fitWidth="767.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@WuKingdom.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="201.0" layoutY="43.0" prefHeight="70.0" prefWidth="414.0" text="Red Cliff on Fire" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.79" specularConstant="0.85" specularExponent="26.61">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.956358015537262" green="1.0" blue="0.6259258985519409" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <Label fx:id="displayMatrix" alignment="TOP_CENTER" layoutX="177.0" layoutY="169.0" prefHeight="286.0" prefWidth="463.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.5" />
+         </font>
+      </Label>
+      <Label fx:id="display" layoutX="228.0" layoutY="113.0" prefHeight="38.0" prefWidth="360.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="clusterFound" alignment="TOP_CENTER" layoutX="309.0" layoutY="400.0" prefHeight="54.0" prefWidth="215.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="find" layoutX="334.0" layoutY="503.0" mnemonicParsing="false" onAction="#find" text="Find how many clusters">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
